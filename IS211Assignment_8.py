@@ -126,6 +126,8 @@ def main():
     args = parser.parse_args()
     if args.Player:
         Player()
+    else:
+        ComputerPlayer(Player)
 
     my_game = Game(factory(player_type='computer'), 'John')
     my_game.play()
